@@ -11,6 +11,12 @@
 
 .nav-bar {
     height: 14vh;
-    width: 90%;
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+    left: 0;
+    right: 0;
+    transition: background-color 0.3s ease-in-out;
 }
+
 

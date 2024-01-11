@@ -1,3 +1,3 @@
 
 export * from './SectionOne'
-export * from './NavBar'
+export * from './SectionTwo'

@@ -1,9 +1,9 @@
-
-import React from 'react'
 import { BackGround } from '../../ui/components/index'
 
+import { SectionOne, SectionTwo } from '../Design'
+import { NavBar } from '../components/NavBar'
+
 import '../styles/styles.css'
-import { NavBar, SectionOne } from '../Design'
 
 
 export const HomePage = () => {
@@ -12,9 +12,7 @@ export const HomePage = () => {
     <div className='container-div text-slate-50 dark:text-slate-900'>
       <NavBar></NavBar>
       <SectionOne></SectionOne>
-      <section className='w-full h-full relative z-10 bg-slate-800/80 rounded-3xl backdrop-blur-sm'>  
-        <h1 className='text-center text-2xl md:text-4xl'>Habilidades</h1>
-      </section>
+      <SectionTwo></SectionTwo>
       <BackGround></BackGround>
     </div>
     </>

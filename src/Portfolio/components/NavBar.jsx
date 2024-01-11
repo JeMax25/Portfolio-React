@@ -1,10 +1,33 @@
+import { useEffect, useState } from "react";
 import { ButtonTheme } from "../../ui/components"
 
 export const NavBar = () => {
+
+    const [scrollY, setScrollY] = useState(0);
+    const [scrollBar, setScrollBar] = useState(false)
+
+    const handleScroll = () => {
+
+        const scrollTop = window.scrollY;
+
+        setScrollY(scrollTop);
+      }
+
+    useEffect(() => {
+      
+      if(scrollY > 80) {
+        setScrollBar(true);
+      } 
+      else{
+        setScrollBar(false)
+      }
+
+    }, [scrollY])
+    
+      window.addEventListener('scroll', handleScroll);
     
   return (
-    <header className="nav-bar flex justify-between items-center m-aut text-slate-50 dark:text-slate-900 fixed top-0 left-auto z-20
-                       ">
+    <header className={`nav-bar flex justify-between items-center m-aut text-slate-50 dark:text-slate-900 fixed top-0 left-auto z-20        ${scrollBar ? 'bg-slate-800 dark:bg-slate-200' : ''}`}>
         <h1 className="font-semibold lg:text-3xl md:text-2xl text-xl">JEMAX</h1>
         <div className="flex">
             <nav className="flex items-center gap-2">
