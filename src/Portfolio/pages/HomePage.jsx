@@ -13,6 +13,9 @@ export const HomePage = () => {
       <NavBar></NavBar>
       <SectionOne></SectionOne>
       <SectionTwo></SectionTwo>
+      <section className='w-full h-full relative z-10'>
+        <h1 className='text-center text-2xl md:text-3xl lg:text-4xl font-bold'>Acerca De Mi</h1>
+      </section>
       <BackGround></BackGround>
     </div>
     </>

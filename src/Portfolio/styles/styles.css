@@ -3,7 +3,7 @@
 .container-div {
     margin-top: 13vh;
     width: auto;
-    height: 80vh;
+    height: 90vh;
 }
 
 
@@ -18,5 +18,22 @@
     right: 0;
     transition: background-color 0.3s ease-in-out;
 }
+
+/* Swiper */
+
+swiper-container {
+    padding: 15px;
+}
+
+.card-container {
+    bottom: -80%;
+    transition: bottom 0.5s ease-out;
+}
+
+.project-img:hover .card-container {
+    bottom: 0%;
+    
+}
+
 
 
