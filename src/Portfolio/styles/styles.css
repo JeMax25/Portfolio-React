@@ -22,11 +22,11 @@
 /* Swiper */
 
 swiper-container {
-    padding: 15px;
+    padding: 4vw;
 }
 
 .card-container {
-    bottom: -80%;
+    bottom: -100%;
     transition: bottom 0.5s ease-out;
 }
 

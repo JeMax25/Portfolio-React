@@ -10,5 +10,16 @@ body{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+body::-webkit-scrollbar {
+    width: 7px;
+    background-color: #64748b;
+}
+
+body::-webkit-scrollbar-thumb {
+   background: #334155;
+   border-radius: 10px;
+}
+
+
 
 
