@@ -34,7 +34,7 @@ swiper-slide{
 }
 
 .img-card {
-    box-shadow: 1px 1px 8px 6px rgba(0, 0, 0, 0.821);
+    box-shadow: 1px 1px 9px 4px rgba(0, 0, 0, 0.821);
     border-radius: 0.5rem;
 }
 
@@ -59,10 +59,14 @@ swiper-slide{
 
 .slide {
     width: 10vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .slide img{
-    width: 100%;
+    width: 40%;
+    
 }
 
 @keyframes scroll {
@@ -72,4 +76,20 @@ swiper-slide{
     100% {
         transform: translateX(calc(-10vw * 10));
     }
+}
+
+/*  img-photo section 3*/
+
+.container-photo {
+    width: 35%;
+    height: auto;
+    height: auto;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.img-photo {
+    width: 100%;
+    height: 100%;
+    
 }
