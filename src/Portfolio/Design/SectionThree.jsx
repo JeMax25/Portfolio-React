@@ -24,7 +24,7 @@ export const SectionThree = () => {
         </div> 
       </div>
     </section>
-    <div className="h-auto w-full relative z-10 bg-slate-800 dark:bg-slate-50 rounded-3xl mt-16 pt-2 pb-6 flex-col ">
+    <div className="h-auto w-full relative z-10 bg-slate-800 dark:bg-slate-50 rounded-3xl mt-10 pt-2 pb-6 flex-col ">
       <h1 className='text-center text-3xl md:text-4xl lg:text-5xl font-bold pb-6'>Skills</h1>
       <SliderInfinite></SliderInfinite>  
     </div>
