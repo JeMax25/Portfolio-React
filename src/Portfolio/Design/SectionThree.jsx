@@ -3,7 +3,7 @@ import { SliderInfinite } from "../components/SliderInfinite"
 export const SectionThree = () => {
   return (
     <>
-    <section className='w-full h-1/2 mt-48 p-9 relative z-10 bg-slate-800 dark:bg-slate-50 rounded-3xl'>
+    <section className='w-full h-auto mt-48 p-6 relative z-10 bg-slate-800 dark:bg-slate-50 rounded-3xl'>
       <div className="flex justify-evenly items-center h-full gap-10">
         <div className="container-photo">
           <img className="img-photo object-cover" src="./src/Portfolio/assets/img-photo/photo.png" alt="" />
@@ -24,7 +24,7 @@ export const SectionThree = () => {
         </div> 
       </div>
     </section>
-    <div className="h-auto w-full relative z-10 bg-slate-800 rounded-3xl mt-16 pt-2 pb-6 flex-col ">
+    <div className="h-auto w-full relative z-10 bg-slate-800 dark:bg-slate-50 rounded-3xl mt-16 pt-2 pb-6 flex-col ">
       <h1 className='text-center text-3xl md:text-4xl lg:text-5xl font-bold pb-6'>Skills</h1>
       <SliderInfinite></SliderInfinite>  
     </div>
