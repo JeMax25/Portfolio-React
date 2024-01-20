@@ -6,7 +6,7 @@ export const SectionThree = () => {
     <section className='w-full h-auto mt-48 p-6 relative z-10 bg-slate-800 dark:bg-slate-50 rounded-3xl'>
       <div className="flex justify-evenly items-center h-full gap-10">
         <div className="container-photo">
-          <img className="img-photo object-cover" src="./src/Portfolio/assets/img-photo/photo.png" alt="" />
+          <img className="img-photo object-cover" src="./assets/img-photo/photo.png" alt="" />
         </div>
         <div className="w-2/3">
           <h1 className="text-center text-3xl md:text-4xl lg:text-5xl font-bold lg:mb-6">About Me</h1>

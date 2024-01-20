@@ -11,7 +11,7 @@ export const SliderInfinite = () => {
       { 
         numberTec.map( n => (
           <div key={key++} className="slide">
-            <img src={`./src/Portfolio/assets/Tec/${n}.png`} alt="" />
+            <img src={`./assets/Tec/${n}.png`} alt="" />
           </div>
         ))
       }
