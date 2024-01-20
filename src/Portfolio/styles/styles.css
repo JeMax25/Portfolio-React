@@ -50,6 +50,9 @@ swiper-slide{
 
 
 /* Slider Infinite */
+.slider {
+    padding: 20px;
+}
 
 .slider .slide-track {
     animation: scroll 40s linear infinite;
@@ -65,7 +68,7 @@ swiper-slide{
 }
 
 .slide img{
-    width: 40%;
+    width: 50%;
     
 }
 
