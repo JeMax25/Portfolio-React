@@ -4,6 +4,7 @@ export const getTheme = () => {
 
     const [theme, setTheme] = useState('dark');
 
+
     useEffect(() => {
 
         if( theme === 'ligth') {
@@ -19,10 +20,10 @@ export const getTheme = () => {
 
     const handleChangeTheme = () => {
         setTheme(prevTheme => prevTheme === 'ligth' ? 'dark' : 'ligth');
-        console.log(theme)
     }
 
     return {
         handleChangeTheme,
+        theme
     }
 }

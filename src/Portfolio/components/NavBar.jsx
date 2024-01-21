@@ -25,6 +25,26 @@ export const NavBar = () => {
     }, [scrollY])
     
       window.addEventListener('scroll', handleScroll);
+
+      const scrollToElement = (elementId) => {
+
+        const element = document.getElementById(elementId);
+    
+        if (element) {
+          const offset = element.getBoundingClientRect().top + window.scrollY - window.screen.height * 0.2 ;
+    
+          // Actualizar el estado para activar el desplazamiento suave
+          setScrolling(true);
+    
+          window.scrollTo({
+            top: offset,
+            behavior: 'smooth',
+          });
+    
+        }
+      };
+    
+      const [scrolling, setScrolling] = useState(false);
     
   return (
     <header className={`nav-bar flex justify-between items-center m-aut text-slate-50 dark:text-slate-900 fixed top-0 left-auto z-20 ${scrollBar ? 'bg-slate-800/95 dark:bg-slate-200/95 backdrop-blur-sm' : ''}`}>
@@ -33,8 +53,8 @@ export const NavBar = () => {
             <nav className="flex items-center gap-2">
                 <ul className="flex lg:gap-12 md:gap-6 gap-5 md:text-xl text-base">
                     <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Proyectos</a></li>
-                    <li><a href="#">Habilidades</a></li>
+                    <li onClick={() => scrollToElement('projects')}>Proyectos</li>
+                    <li onClick={() => scrollToElement('About')}>Habilidades</li>
                 </ul>
                 <ul className="flex gap-2 lg:ml-7 lg:mr-7 md:ml-4 md:mr-4 ml-3 mr-3 w-full ">
                     <li className="bg-zinc-950 border-slate-50 dark:bg-slate-50 dark:border-slate-900 h-8 w-8 text-center border-solid border-2  rounded-full"><a href="#">in</a></li>
