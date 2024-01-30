@@ -95,3 +95,9 @@ swiper-slide{
     height: 100%;
     
 }
+
+/* footer */
+
+.footer {
+    left: -5vw;
+  }

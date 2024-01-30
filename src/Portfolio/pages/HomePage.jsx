@@ -1,6 +1,6 @@
 import { BackGround } from '../../ui/components/index'
 
-import { SectionFour, SectionOne, SectionThree, SectionTwo } from '../Design'
+import { Footer, SectionFour, SectionOne, SectionThree, SectionTwo } from '../Design'
 import { NavBar } from '../components/NavBar'
 
 import '../styles/styles.css'
@@ -15,6 +15,7 @@ export const HomePage = () => {
       <SectionTwo></SectionTwo>
       <SectionThree></SectionThree>
       <SectionFour></SectionFour>
+      <Footer></Footer>
       <BackGround></BackGround>
     </div>
     </>
