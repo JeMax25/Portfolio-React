@@ -15,15 +15,14 @@ export const SectionFour = () => {
       setUrlSvg('svg-white')
     }
 
-  }, [themeIcons])
-  
-  
+  }, [themeIcons]);
+
   return (
-    <section className='w-full h-auto relative z-10 bg-slate-800 dark:bg-slate-50 rounded-3xl p-8 mt-36'>
+    <section className='w-full h-auto relative z-10 bg-slate-800 dark:bg-slate-50 rounded-3xl p-8 mt-36' id="contact">
       <h1 className='text-center text-4xl font-bold pb-10 pt-4'>Contacto</h1>
       <div className='flex flex-col-reverse md:flex-row justify-between items-center md:items-start '>
         <div className="w-1/2 flex flex-col items-center">
-          <img src="./assets/img-form.svg" width='300px' alt="" className="hidden md:block" />
+          <img src="./assets/img-form.svg" width='300px' alt="" className="hidden md:block drop-shadow-lg" />
           <ul className="text-l flex flex-col items-center justify- md:items-start gap-4 mt-8">
             { icons.map( (icon) => (
               <li key={icon.name} className="flex">
@@ -41,11 +40,12 @@ export const SectionFour = () => {
 
           </ul>
         </div>
-        <form action="" className='flex flex-col gap-3 w-full md:w-1/2 h-full '>
-          <input type="text" placeholder='Nombre' className='h-12 p-2 bg-slate-600 dark:bg-slate-300 rounded-lg shadow-lg '/>
-          <input type="text" placeholder='Correo Electronico' className='h-12 p-2 bg-slate-600 dark:bg-slate-300 rounded-lg shadow-lg'/>
-          <input type="text" placeholder='Asunto' className='h-12 p-2 bg-slate-600 dark:bg-slate-300 rounded-lg shadow-lg'/>
-          <textarea name="" placeholder='Información...' id="" cols="30" rows="10" className='bg-slate-600 dark:bg-slate-300 p-2 rounded-lg shadow-lg'></textarea>
+        <form action="" className='flex flex-col gap-3 w-full md:w-1/2 h-full'>
+          <input type="text" name="Nombre" placeholder='Nombre' className='h-12 p-2 bg-slate-600 dark:bg-slate-300 rounded-lg shadow-lg '/>
+          <input type="email" name="Correo" placeholder='Correo Electronico' className='h-12 p-2 bg-slate-600 dark:bg-slate-300 rounded-lg shadow-lg'/>
+          <input type="text" name="Asunto" placeholder='Asunto' className='h-12 p-2 bg-slate-600 dark:bg-slate-300 rounded-lg shadow-lg'/>
+          <textarea name="Información" placeholder='Información...' id="" cols="30" rows="10" className='bg-slate-600 dark:bg-slate-300 p-2 rounded-lg shadow-lg'></textarea>
+          <input type="submit" value={'Enviar'} className="cursor-pointer w-auto h-8 bg-slate-600 dark:bg-slate-300 rounded-md"></input>
         </form>
         </div>
     </section>
