@@ -23,8 +23,6 @@ export const SectionTwo = () => {
     };
   }, []);
 
-  console.log(ventanaPequena)
-
   return (
     <section className='w-full h-auto relative z-10 bg-slate-800 dark:bg-slate-200 rounded-3xl backdrop-blur-sm' id="projects" >  
         <h1 className='text-center text-2xl md:text-4xl lg:text-5xl p-7 font-bold dark:text-slate-900'>Proyectos</h1>
