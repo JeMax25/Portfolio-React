@@ -7,4 +7,4 @@ export const icons = [{
     description: '+57 3105748228'
 }]
 
-export const iconsCon = ['facebook','instagram']
+export const iconsCon = ['facebook','instagram'];

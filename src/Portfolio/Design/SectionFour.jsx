@@ -3,6 +3,7 @@ import { ThemeContext } from "../../context/ThemeContext"
 import { icons,iconsCon } from "../info/infoIcons"; 
 import emailjs from '@emailjs/browser';
 import { useForm } from "../../hooks/useForm";
+import Swal from 'sweetalert2'
 
 export const SectionFour = () => {
 
@@ -29,9 +30,16 @@ export const SectionFour = () => {
 
   const sendEmail = (event) => {
     event.preventDefault();
+
+    if(user_name.length < 1 || mail_id.length < 1){
+      Swal.fire('Formulario Inválido','Asegúrese de llenar todos los campos.','error');
+      return
+    };
+
     onResetForm();
    try {
-     emailjs.sendForm('service_8mbt6hd', 'template_p5govio', form.current, 'Cq_gRrvn2rBlvqHXy')
+     emailjs.sendForm('service_8mbt6hd', 'template_p5govio', form.current, 'Cq_gRrvn2rBlvqHXy');
+     Swal.fire('Correo Enviado','','success')
    } catch (error) {
       console.log(error);
    }
@@ -54,7 +62,9 @@ export const SectionFour = () => {
                   <li className="flex gap-3">
                     {
                       iconsCon.map((icon) => (
-                        <img key={icon} src={`./assets/${urlSvg}/${icon}.svg`} alt="" className="w-7"/>
+                        <a key={icon} target="_blank" href={icon === 'facebook' ? 'https://www.facebook.com/jeison.aranguren.14/' : 'https://www.instagram.com/jemax25/'}>
+                          <img  src={`./assets/${urlSvg}/${icon}.svg`} alt="" className="w-7 cursor-pointer"/>
+                        </a>
                       ))
                     }
                   </li>
@@ -65,7 +75,7 @@ export const SectionFour = () => {
           <input type="text" name="user_name" value={user_name} onChange={onInputChange} placeholder='Nombre' className='h-12 p-2 bg-slate-600 dark:bg-slate-300 rounded-lg shadow-lg '/>
           <input type="email" name="mail_id" value={mail_id} onChange={onInputChange} placeholder='Correo Electronico' className='h-12 p-2 bg-slate-600 dark:bg-slate-300 rounded-lg shadow-lg'/>
           <input type="text" name="subject" value={subject} onChange={onInputChange} placeholder='Asunto' className='h-12 p-2 bg-slate-600 dark:bg-slate-300 rounded-lg shadow-lg'/>
-          <textarea name="message" value={message} onChange={onInputChange} placeholder='Información...' id="" cols="30" rows="10" className='bg-slate-600 dark:bg-slate-300 p-2 rounded-lg shadow-lg resize-none'></textarea>
+          <textarea name="message" value={message} onChange={onInputChange} placeholder='Información...' id="" cols="30" rows="6" className='bg-slate-600 dark:bg-slate-300 p-2 rounded-lg shadow-lg resize-none'></textarea>
           <input type="submit" value={'Enviar'} className="cursor-pointer w-auto h-10 bg-slate-600 dark:bg-slate-300 rounded-md"></input>
         </form>
         </div>
